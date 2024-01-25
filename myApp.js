@@ -9,17 +9,12 @@ mongoose.connect(process.env.MONGO_URI, {
 const personSchema = new mongoose.Schema({
   name: {
     Type: String,
-    required: true,
   },
-
   age: {
     Type: Number,
-    required: true,
   },
-
-  name: {
+  favoriteFoods: {
     Type: [String],
-    required: false,
   },
 });
 
