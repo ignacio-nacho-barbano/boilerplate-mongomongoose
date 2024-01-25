@@ -5,17 +5,12 @@ const mongoose = require("mongoose");
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
 // });
+const Schema = mongoose.Schema;
 
-const personSchema = new mongoose.Schema({
-  name: {
-    Type: String,
-  },
-  age: {
-    Type: Number,
-  },
-  favoriteFoods: {
-    Type: [String],
-  },
+const personSchema = new Schema({
+  name: { type: String, required: true },
+  age: Number,
+  favoriteFoods: [String],
 });
 
 let Person = mongoose.model("Person", personSchema);
