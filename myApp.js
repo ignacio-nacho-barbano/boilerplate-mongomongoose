@@ -1,5 +1,9 @@
-require('dotenv').config();
+require("dotenv").config();
 
+mongoose.connect(process.env.PORT, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 let Person;
 
